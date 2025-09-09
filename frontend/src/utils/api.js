@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = process.env.baseURL || "http://localhost:3001";
 
 // helper to get token from localStorage
 const getToken = () => localStorage.getItem("token");
