@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 export default function useApi() {
   const { token } = useContext(AuthContext);
   const api = axios.create({
-    baseURL: "http://localhost:3001",
+    baseURL: process.env.baseURL || "http://localhost:3001",
     headers: token ? { Authorization: `Bearer ${token}` } : {},
   });
   return api;
