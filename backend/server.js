@@ -15,10 +15,12 @@ app.use('/equipment', equipmentRoutes);
 app.use('/workorders', workOrderRoutes);
 app.use('/users', userRoutes);
 
-const PORT = 3001;
-connectMongo().then(() => {
-  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-});
+
+// to run in local
+// const PORT = 3001;
+// connectMongo().then(() => {
+//   app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// });
 
 // Export handler for Vercel
 module.exports = app;
