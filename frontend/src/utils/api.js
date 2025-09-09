@@ -1,6 +1,4 @@
-const API_BASE_URL = process.env.baseURL || "http://localhost:3001";
-
-// helper to get token from localStorage
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
 const getToken = () => localStorage.getItem("token");
 
 const api = {
