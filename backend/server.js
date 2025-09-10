@@ -14,13 +14,14 @@ app.use('/auth', authRoutes);
 app.use('/equipment', equipmentRoutes);
 app.use('/workorders', workOrderRoutes);
 app.use('/users', userRoutes);
-connectMongo();
 
 // to run in local
-// const PORT = 3001;
-// connectMongo().then(() => {
-//   app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-// });
+const PORT = 3001;
+connectMongo().then(() => {
+  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+});
 
 // Export handler for Vercel
-module.exports = app;
+
+// connectMongo();
+// module.exports = app;
